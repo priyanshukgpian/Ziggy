@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible"content="IE=edge">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0"/>
+     <title>Membership</title>
+     <link rel="stylesheet" href="style.css" type="text/css">
+    <link href='https://css.gg/ericsson.css' rel='stylesheet'>
+     <link href='https://unpkg.com/aos@next/dist/aos.css' rel='stylesheet'>
+     <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" rel="stylesheet"/> 
+<style>
+    body {
+         background:url("https://thumbs.dreamstime.com/z/hands-holding-membership-word-against-wooden-background-87967941.jpg");
+         background-size:cover;
+         background-attachment:fixed;
+        
+      }
+ @media(max-width:700px){
+       background-size:150vh;
+}
+.member{
+       display:flex;
+       flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      height:600px;
+      padding:10px;
+}
+
+</style>
+<script type="text/javascript">
+            function showMessage() {
+            
+             alert("Thank You for registering");
+            }
+        </script>
+</head>
+<body>
+<!--nav bar-->
+<header>
+<nav  class="navbar">
+     <ul>
+    <li class="logo">ZIGGY</li>
+    <li class="toggle"><i class="gg-ericsson"></i></li>
+    <li class="links"><a href="index.html">Home</a></li>
+    <li class="links"><a href="about.html">About</a></li>
+    <li class="links"><a href="foods.html">Foods</a></li>
+   
+     <li class="links"><a href="membership.html">Membership</a></li>
+    <li class="links"><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav> 
+</header>
+<div class="membershiphead">
+       <h1>MEMBERSHIP</h1>
+</div>
+<div class="member">
+<div class="regbox">
+<form action="file:///C:/Users/User/Desktop/website/thank.html" id="f">
+<div class="user-details">
+      <div class="input-box">
+            <span class="details" id="fname">
+             Full Name</span>
+             <input type="text" placeholder="Enter your name" required>
+      </div>
+       <div class="input-box">
+            <span class="details" id="uname">
+             Username</span>
+             <input type="text" placeholder="Enter your username" required>
+      </div>
+ <div class="input-box">
+            <span class="details" id="email">
+             Email</span>
+             <input type="text" placeholder="Enter your email" required>
+      </div>
+ <div class="input-box">
+            <span class="details" id="phno">
+             Phone Number</span>
+             <input type="text" placeholder="Enter yourr phone number" required>
+      </div>
+ <div class="input-box">
+            <span class="details" id="pass">
+            Password </span>
+             <input type="text" placeholder="Enter your password" required>
+      </div>
+ <div class="input-box">
+            <span class="details" id="cpass">
+             Confirm Password</span>
+             <input type="text" placeholder="Confirm your password" required>
+      </div>
+</div>       
+<div class="gender-details">
+      <span class="gender-title">Gender</span>
+      <br>
+      <div class="genchoice">
+      <label for="male">
+        <input type="radio" name="gen" id="male" value="1" size="5">Male
+     </label> 
+     <label for="female">
+        <input type="radio" name="gen" id="female" value="2">Female
+     </label> 
+      <label for="third">
+        <input type="radio" name="gen" id="third" value="3">Prefer not to say
+     </label>
+</div> 
+</div>
+
+<div class="submit">
+     <button onClick="showMessage()">Register</button>
+      <script src="script.js"></script> 
+</div>     
+</form>     
+</div> 
+</div>
+ </body>
+</html>

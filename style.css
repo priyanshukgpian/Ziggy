@@ -1,0 +1,831 @@
+* {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial;
+      }
+      /*making flex box*/
+      .navbar ul{
+          display: flex;
+          width: 100%;
+          height:auto;
+          background-color: black;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          flex-wrap:wrap;
+      }
+      .navbar li{
+      list-style-type: none;      
+      padding: 1rem;   /*using rem ache se sajadega saare flex item ko 1rem=16px*/
+      }
+      .navbar a{
+        text-decoration:none;  /*this removess underline from href*/
+        color:white;
+      }
+      .logo{
+         flex:1;
+          font-size:20px;
+          user-select:none;
+      }
+      .toggle{
+            display:none;
+      }
+      .links:hover a{
+              color:cyan;
+              
+      }
+      @media(max-width:700px){
+      .navbar ul{
+      flex-wrap:wrap;
+      }
+      .toggle{
+          display:block;
+      }
+      .links{
+         width:100%;
+         height:auto;
+         text-align:center;
+      }
+      }
+      .welcme{
+            display:flex;
+            color:cyan;
+            animation-duration:5s;
+            animation-name:slidein;
+            animation-iteration-count:infinite;
+      }
+      
+      @keyframes slidein{
+                 0%{
+                  margin-left:100px;
+                }
+                50%{
+                 margin-left:400px;
+      }
+               100%{
+                 margin-left:100px;
+      }
+      }
+      @media(max-width:700px){
+      .welcme{
+        width:100%;
+       flex-wrap:wrap;
+      animation-duration:5s; 
+       @keyframes slidein{
+                 0%{
+                  margin-left:5px;
+                }
+                50%{
+                 margin-left:20px;
+      }
+               100%{
+                 margin-left:20px;
+      }
+      }
+      }
+      }
+      .foodimg{
+           width:100%;
+           height:auto;
+      }
+      
+      .fbox{
+           position:relative;
+           width:1000px;
+           height:500px;
+           display:flex;
+           justify-content:space-between;
+           align-items:center;
+           flex-wrap:wrap;
+       }
+      .fbox .card{
+           position:relative;
+           max-width:450px;
+           display:flex;
+      }
+      .images{
+      
+         float:left;
+          width:33.333333333333%;
+         height:10px;
+         padding-left:15px;
+         padding-right:15px;
+         padding-top:15px;
+         padding-bottom:15px;
+         height:500px;
+          }
+      
+      
+      .intro{
+           font-family:italic;
+          background-image: linear-gradient(
+             -225deg,
+             #231577 0%,
+             #44107a 29%,
+             #ff1361 67%,
+             #fff800 100%
+      );
+      background-size:auto auto;
+      background-clip:border-box;
+      background-size:200% auto;
+      color:#fff;
+      background-clip:text;
+      text-fill-color:transparent;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:textclip 2s linear infinite;
+      display:inline-block;
+       }
+      @keyframes textclip{
+          to{
+            background-position:200% center;
+      }
+      }
+      }
+      main {
+            display:flex;
+            width:100%;
+            height:100vh;
+      }
+      .photo {
+            margin: 20px;
+            width:20%;
+            height:220px;
+            border-radius:10%;
+            box-shadow:0 20px 40px rgba(0,0,0,0.4);
+            
+      }
+      @media(max-width:700px){
+              .photo{
+                      width:30%;
+                      height:120px;
+                      margin:0px;
+              }
+              footer{
+                     height:fit-content;
+              }
+      }
+      .partner1{
+               float:left;
+              padding-left: 2rem;
+               
+      }
+      
+    /*  .photo-1{
+             
+              padding-left:5px;
+              
+      }
+      .photo-2{
+            
+               padding-left:5px;
+              
+      }
+      .photo-3{
+              
+             padding-left:5px;
+              
+      }
+      .photo-4{
+             
+              padding-left:5px;
+             
+      }
+      .photo-5{
+             
+               padding-left:5px;
+             
+      }*/
+      .foodheading{
+                  color:green;
+                  border:2px dotted green;
+                  padding:10px 5px;
+                  margin:10px 10px 10px 10px;
+                  width:100%;
+                  background-color:orange;
+                 font-family:"Lucida Console","Courier New",monospace;
+                 text-shadow:3px 4px darkgreen;
+      }
+      .Indian {
+                width:100%;
+                height:100vh;
+                background:url("https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F3070%2Ftrend20210218124824.jpg");
+                background-size:cover;
+                background-attachment:fixed;
+                
+               
+      }
+      
+      .Indian h1{
+               border:2px solid black;
+               padding:5px 5px;
+               margin:5px 5px;
+               opacity:0.6;
+               background-color:grey;
+               text-align:center;
+      }
+      .Thai {
+               
+               width:100%;
+                height:100vh;
+                background:url("https://www.remotelands.com/travelogues/app/uploads/2018/08/shutterstock_761494024.jpg");
+                background-size:cover;
+                background-attachment:fixed;
+      }
+      .Thai h1{
+               border:2px solid black;
+               padding:5px 5px;
+               margin:5px 5px;
+               opacity:0.6;
+               background-color:grey;
+               text-align:center;
+      }
+      .Desserts{
+             
+               width:100%;
+                height:100vh;
+                background:url("https://c.ndtvimg.com/2020-04/chd4rs3g_dessert_625x300_07_April_20.jpg");
+                background-size:cover;
+                background-attachment:fixed;
+      }
+      .Desserts h1{
+               border:2px solid black;
+               padding:5px 5px;
+               margin:5px 5px;
+               opacity:0.6;
+               background-color:grey;
+               text-align:center;
+      }
+      .Chinese {
+              
+               width:100%;
+                height:100vh;
+                background:url("https://images.chinahighlights.com/allpicture/2021/12/71879439c9ef4d0da835efb6_cut_750x400_39.jpg");
+                background-size:cover;
+                background-attachment:fixed;
+      }
+      .Chinese h1{
+               border:2px solid black;
+               padding:5px 5px;
+               margin:5px 5px;
+               opacity:0.6;
+               background-color:grey;
+               text-align:center;
+      }
+      .Sweets{
+                
+                width:100%;
+                height:100vh;
+                background:url("https://foodsafetyhelpline.com/wp-content/uploads/2021/10/INDIAN-SWEETS-1.jpg");
+                background-size:cover;
+                background-attachment:fixed;
+      }
+      .Sweets h1{
+               border:2px solid black;
+               padding:5px 5px;
+               margin:5px 5px;
+               opacity:0.6;
+               background-color:grey;
+               text-align:center;
+      }
+      .indian1img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .indian1{
+              display:flex;
+              flex-wrap:wrap;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      
+      .in-txt1{
+             width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .indian2img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .indian2{
+              display:flex;
+              flex-wrap:wrap;
+              flex-direction:row-reverse;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .in-txt2{
+              width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .thai1img{
+                 
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .thai1{
+              display:flex;
+              flex-wrap:wrap;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .thai-txt1{
+               width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .thai2img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .thai2{
+              display:flex;
+              flex-wrap:wrap;
+              flex-direction:row-reverse;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .thai-txt2{
+               width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .chi1img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .chi1{
+              display:flex;
+              flex-wrap:wrap;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .chi-txt1{
+              width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .chi2img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .chi2{
+              display:flex;
+              flex-wrap:wrap;
+              flex-direction:row-reverse;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .chi-txt2{
+               width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .des1img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .des1{
+              display:flex;
+              flex-wrap:wrap;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .des-txt1{
+              width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .des2img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .des2{
+              display:flex;
+              flex-wrap:wrap;
+              flex-direction:row-reverse;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .des-txt2{
+               width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .sweet1img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .sweet1{
+              display:flex;
+              flex-wrap:wrap;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .sweet-txt1{
+             width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      .sweet2img{
+                  width:400px;
+                  height:260px;
+                  border-radius:20%;
+                  border:1px solid green;
+      }   
+      .sweet2{
+              display:flex;
+              flex-wrap:wrap;
+              flex-direction:row-reverse;
+              padding:10px 10px;
+              margin:10px 10px;
+      }   
+      .sweet-txt2{
+                width:700px;
+               margin:30px 30px 30px 30px;
+               padding:25px 10px 10px 10px;
+               text-align:center;
+               border:2px  double   darkgreen;
+              background-color:green;
+              border-radius:15px;
+              height:200px;
+      }
+      @media(max-width:600px){
+                          
+                               
+                            
+                               .in-txt1{
+                                width:400px;
+                                height:170px;
+      }
+                             .Indian{
+                                     height:230vh;
+      }
+                            .in-txt2{
+                                width:400px;
+                                height:170px;
+      }
+       .thai-txt1{
+                                width:400px;
+                                height:170px;
+      }
+                             .Thai{
+                                     height:230vh;
+      }
+                            .thai-txt2{
+                                width:400px;
+                                height:170px;
+      }
+       .chi-txt1{
+                                width:400px;
+                                height:170px;
+      }
+                             .Chinese{
+                                     height:230vh;
+      }
+                            .chi-txt2{
+                                width:400px;
+                                height:170px;
+      }
+       .des-txt1{
+                                width:400px;
+                                height:170px;
+      }
+                             .Desserts{
+                                     height:230vh;
+      }
+                            .des-txt2{
+                                width:400px;
+                                height:170px;
+      }
+       .sweet-txt1{
+                                width:400px;
+                                height:170px;
+      }
+                             .Sweets{
+                                     height:230vh;
+      }
+                            .sweet-txt2{
+                                width:400px;
+                                height:170px;
+      }
+           
+      }
+      .contacthead
+      {
+          font-family: 'Teko', sans-serif;
+          color: #4db1bc;
+          background-color: #212121;
+         margin-top:15px;
+          animation: glow 2s ease-in-out infinite alternate;
+          text-align: center;
+      }
+       @keyframes glow {
+          from {
+            text-shadow: 0 0 20px #2d9da9;
+          }
+          to {
+            text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+          }
+        }
+      .contactbody {
+              background: url("https://erasmus-plus.ec.europa.eu/sites/default/files/styles/eac_ratio_16_9_large/public/2021-09/tumisu-pixbay-contact-.png?h=947464aa&itok=uui0aZiQ");
+              background-size:cover;
+              background-attachment:fixed;
+              height:auto;
+
+      }
+      .contact-para{
+                   display:flex;
+                   flex-wrap:wrap;
+                   font-size:30px;
+                    width:100%;
+                   height:100px;
+                   border: 2px none grey;
+                   justify-content:center;
+                   padding:10px 10px 10px 10px;
+                   margin-left:15px;
+                  
+                    margin-top:75px;
+                   text-align:center;
+                   font-family:"Lucida Console","Courier New",monospace;
+                   color:vanilla;
+                   text-shadow:2px 4px grey;
+                   }
+      .centerdiv{
+                height:75vh;
+               display:flex;
+                
+                width:50%;
+               flex-wrap:wrap;
+                /*justify-content:center;*/
+                 /*align-items:center;*/
+                
+      }
+      .centerdiv a{
+                  height:100px;
+                  width:100px;
+                  border-radius:50px;
+                  background-color:white;
+                  text-align:center;
+                 line-height:100px;
+                 font-size:40px;
+                 margin:20px;
+                 
+                 box-shadow:1px 2px 3px 4px black;
+      }
+      .centerdiv a i{
+                    transition:all linear 0.5s;
+      }
+      .centerdiv a:hover{
+                    transform:scale(1.2);
+                    background-color:darkgrey;
+      }
+      .fa-facebook{
+            color:#4267B2;
+      }
+       
+      .fa-instagram{
+            color:#e84393;
+      }
+      .fa-youtube{
+            color:#e84118;
+      }
+      .fa-linkedin{
+            color:#0097e6;
+      }
+      .membershiphead{
+                      font-weight:bold;
+                      font-size:30px;
+                      text-align:center;
+                      color:brown;
+                      padding:5px 5px 5px 5px;
+                      margin:10px 10px 10px 10px;
+                      animation-name:anime;
+                      animation-duration:2s;
+                      animation-iteration-count:infinite;
+      }
+      @keyframes anime{
+        0%    { opacity: 0; }
+       50% {opacity:1}
+       100%  { opacity: 0; }         
+      }
+      .end{
+            background:url("https://rs.projects-abroad.net/v1/hero/indian-cuisine-south-africa-food-tours-product-5e146c7a97eb2.[1600].jpeg");
+            background-size:cover;
+             background-attachment:local;
+             height:450px;
+             width:100%;
+             text-align:center;
+             line-height:225px;
+             color:white;
+             font-weight:bold;
+             text-shadow:3.5px 7px black;
+             animation:slider 9s infinite linear;
+      }
+      @keyframes slider{
+                      0%{background:url("https://rs.projects-abroad.net/v1/hero/indian-cuisine-south-africa-food-tours-product-5e146c7a97eb2.[1600].jpeg");}
+                      50%{background:url("https://www.apptunix.com/blog/wp-content/uploads/sites/3/2020/04/online-food-delivery-industry.jpg");}
+                      100%{background:url("https://imageio.forbes.com/specials-images/imageserve/5fe16bf53ba69575bb1cd088/0x0.jpg?format=jpg&crop=8995,6000,x0,y0,safe&width=1200");}
+      } 
+      .regbox{
+            
+            max-width:700px;
+            width:100%;
+            background:white;
+            padding:25px 30px;
+            border-radius:5px;
+            border:10px double brown;
+      }
+       .regbox form .user-details{
+                                 display:flex;
+                                 flex-wrap:wrap;
+      }
+      form .user-details .input-box{
+                             width:300px;
+                             margin:20px 0 12px 0;
+      }
+      .user-details .input-box input{
+                                      height:45px;
+                                     width:90%;
+                                     outline:none;
+                                     border-radius:5px;
+                                     border:1px solid #ccc;
+                                     padding-left:15px;
+                                     font-size:16px;
+      }
+      .user-details .input-box .details{
+                                     display:block;
+                                      font-weight:500px;
+                                     margin-bottom:5px;
+      }
+      .user-details .input-box input:hover{
+                                border-color :green;  
+                                 border-bottom-width:2px; 
+      }
+      form .gender-details .gender-title{
+                    font-size:20px;
+                    font-weight:500px;
+                     padding:10px 10px 10px 10px;
+                     font-family:arial;
+      }
+      form .gender-details .genchoice{
+                                     padding:10px;
+      }
+      form .gender-details .genchoice label{
+                                     padding:30px;
+      accent-color:green;
+      }
+      form .gender-details .genchoice label:hover{
+                                     color:green;
+      }
+      .submit button{
+             width:300px;
+             height:25px;
+             display:flex;
+             justify-content:center;
+             align-items:center;
+            margin-left:150px;
+            margin-right:150px;
+            transition:all linear 0.3s;
+      }
+      .submit button:hover{
+                     background:green;
+                     transform:scale(1.2);
+      }  
+      .feedbackhead {
+                    display:flex;
+                    flex-wrap:wrap;
+                    justify-content:center;
+                     height:80px;
+                    align-items:center;
+      }                              
+      .feedbacktxt{
+                   
+                   text-align:center;
+                   font-weight:bold;
+      }
+      .rate-emoji{
+                 display:flex;
+                 flex-wrap:wrap;
+                 justify-content:center;
+                 height:50px;
+      }
+      form .rate-emoji label{
+                      padding-left:30px;
+                      padding-right:20px;  
+                      accent-color:grey; 
+                      transition:all linear 0.3s;
+      }
+      form .rate-emoji label:hover{
+                            transform:scale(2);
+      }
+      .txtrev p{
+             padding-top:10px;
+             text-align:center;
+             font-weight:bold;
+      }
+       .txtrev input{
+                            display:flex;
+                             flex-wrap:wrap;
+                             
+                            margin-left:200px;
+                            margin-top:20px;
+                            margin-bottom:20px;
+                            margin-right:10px;
+                            height:70px;
+                            width:900px;
+                            box-shadow:black;
+                            
+      }
+       .txtrev input:hover{
+                                border-color :grey;  
+                                 border-top-width:2px; 
+      }
+       .save-btn{
+                    padding:25px 25px;
+                    margin:25px 25px;
+                     
+      }
+       .save-btn button{
+                  width:90px;
+                 height:40px;  
+                  border-radius:5px;  
+                 background-color:grey;
+                  transition:all linear 0.3s;
+      }
+       .save-btn button:hover{
+                transform:scale(1.1);
+                
+      }
+      #ul-el{
+
+            margin-top:5px;}
+        .location {
+                padding-left: 100px;
+        }  
